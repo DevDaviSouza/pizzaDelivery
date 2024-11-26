@@ -21,8 +21,8 @@ function Opinioes() {
               <p>E-mail: contato@pizzadelivery.com</p>
             </div>
             
-            <div className="bg-gray-200 p-7 w-30vw my-5  rounded-2xl">
-              <form action="" className="flex flex-col gap-5 justify-center h-full">
+            <div className="bg-gray-200 p-7 w-30vw h-auto my-5  rounded-2xl">
+              <form action="" className="flex flex-col gap-2 justify-center h-full">
                 <h1 className="text-2xl font-bold">Opinião</h1>
                 <label className="flex flex-col" htmlFor="nome">
                   Nome 
@@ -35,7 +35,7 @@ function Opinioes() {
 
                 <label className="flex flex-col" htmlFor="mensagem">
                   mensagem
-                  <textarea name="mensagem" id="mensagem" className="rounded-lg outline-none h-28" ></textarea>
+                  <textarea name="mensagem" id="mensagem" className="rounded-lg outline-none " ></textarea>
                 </label>
 
                 <button type="submit" className="bg-sky-600 w-20 rounded-md">Enviar</button>
