@@ -1,5 +1,5 @@
-export default function BtnConfirmar(props) {
+export default function BtnConfirmar({onClick}) {
   return(
-  <button className=" w-48 h-9 text-white bg-sky-600 rounded-lg" onClick={props.onclick}>Confirmar</button>
+  <button type="submit" className=" w-48 h-9 text-white bg-sky-600 rounded-lg" onClick={onClick}>Confirmar</button>
   )
 }

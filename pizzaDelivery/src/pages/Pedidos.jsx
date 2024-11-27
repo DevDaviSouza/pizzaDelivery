@@ -1,8 +1,22 @@
 import {FilePenLine, Trash} from "lucide-react"
+import Header from "../components/Header"
+import { useNavigate } from "react-router-dom"
+import { useEffect } from "react"
 
 export default function Pedidos() {
+    
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        
+        if (localStorage.getItem("id") == null) {
+            navigate("/")
+        }
+    }, [])    
+    
     return (
         <div className="flex flex-col items-center justify-center py-7 bg-gray-100 h-screen">
+            <Header />
             <h1 className="text-4xl font-bold mt-4">Pedidos</h1>
 
             <div>
@@ -30,161 +44,6 @@ export default function Pedidos() {
                             <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
                             <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
                         </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-                        <tr className="flex flex-row justify-evenly w-full items-center">
-                            <td className="w-52 text-center">1</td>
-                            <td className="w-52 text-center">Preparando</td>
-                            <td className="w-52 text-center">Davi Souza</td>
-                            <td className="w-52 text-center">João</td>
-                            <button className="w-52 text-center flex items-center justify-center"><FilePenLine /></button>
-                            <button className="w-52 text-center flex items-center justify-center"><Trash /></button>
-                        </tr>
-
-
                     </tbody>
                 </table>
             </div>

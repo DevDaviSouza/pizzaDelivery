@@ -1,7 +1,18 @@
+import { useNavigate } from "react-router-dom"
 import banner from "../assets/images/banner.jpeg"
 import Header from "../components/Header"
+import { useEffect } from "react"
 
-function Opinioes() {
+export default function Contato() {
+
+  const navigate = useNavigate()
+
+    useEffect(() => {
+        
+        if (localStorage.getItem("id") == null) {
+            navigate("/")
+        }
+    }, [])   
 
   return (
     <div className="overflow-hidden overflow-y-hidden"> 
@@ -21,21 +32,23 @@ function Opinioes() {
               <p>E-mail: contato@pizzadelivery.com</p>
             </div>
             
-            <div className="bg-gray-200 p-7 w-30vw h-auto my-5  rounded-2xl">
-              <form action="" className="flex flex-col gap-2 justify-center h-full">
-                <h1 className="text-2xl font-bold">Opinião</h1>
+            <div className="bg-gray-200 p-7 w-30vw h-auto my-5 rounded-2xl">
+
+              <form action="" className="flex flex-col gap-6 justify-center h-full">
+                <h1 className="text-2xl font-bold">Contato</h1>
+
                 <label className="flex flex-col" htmlFor="nome">
                   Nome 
-                  <input id='nome' type="text" className="rounded-lg outline-none"/>
+                  <input id='nome' type="text" className="rounded-lg py-2 outline-none"/>
                 </label>
                 <label className="flex flex-col" htmlFor="email">
                   email
-                  <input type="email" id="email" className="rounded-lg outline-none"/>
+                  <input type="email" id="email" className="rounded-lg py-2 outline-none"/>
                 </label>
 
                 <label className="flex flex-col" htmlFor="mensagem">
                   mensagem
-                  <textarea name="mensagem" id="mensagem" className="rounded-lg outline-none " ></textarea>
+                  <textarea name="mensagem" id="mensagem" className="rounded-lg outline-none h-20" ></textarea>
                 </label>
 
                 <button type="submit" className="bg-sky-600 w-20 rounded-md">Enviar</button>
@@ -49,4 +62,4 @@ function Opinioes() {
   )
 }
 
-export default Opinioes
+
